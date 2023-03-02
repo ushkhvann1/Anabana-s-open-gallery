@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Yaldevi", sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    hsla(120, 11%, 46%, 1) 0%,
+    hsla(106, 16%, 27%, 1) 100%
+  );
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 22px;
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(28, 43, 45, 1) 11%,
+    rgba(28, 48, 52, 1) 17%,
+    rgba(28, 50, 54, 1) 19%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.myPics-gallery img {
+  height: 100px; /* little pictures' size*/
+  margin: 10px 0; /*distance between*/
+  cursor: pointer;
+  display: block;
+  opacity: 0.5; /*until cursor goes to photo it will have opacity of 0.5*/
+}
+
+/* when cursor goes over the image, it's opacity will rise by 1 */
+.myPics-gallery img:hover {
+  opacity: 1;
+}
+
+.myGallery {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-container img {
+  height: 430px; /*to give size to the big picture*/
+  transition: transform 1s; /* during 1 second it will zoom in picture*/
+}
+
+/* this attribute, expends the picture */
+.image-container img:hover {
+  transform: scale(1.5); /*it will zoom in picture by 1.5*/
+  cursor: zoom-in;
+}
+
+.image-container {
+  padding: 10px;
+}

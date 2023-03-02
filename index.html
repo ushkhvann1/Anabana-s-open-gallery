@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anabana</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Welcome to Anabana's open gallery session</h1>
+    <div class="myGallery">
+      <div class="myPics-gallery">
+        <img
+          src="img/IMG_0721.jpg"
+          alt="locust"
+          onclick="myImageFunction(this)"
+        />
+        <img
+          src="img/IMG_1449.jpg"
+          alt="duckies"
+          onclick="myImageFunction(this)"
+        />
+        <img
+          src="img/IMG_1837.jpg"
+          alt="hands"
+          onclick="myImageFunction(this)"
+        />
+        <img
+          src="img/IMG_2394.jpg"
+          alt="sunrise on window"
+          onclick="myImageFunction(this)"
+        />
+      </div>
+
+      <div class="image-container">
+        <img id="img-Box" src="img/IMG_2685.JPG" alt="open" />
+      </div>
+    </div>
+
+    <script>
+      function myImageFunction(smallImg) {
+        var fullImg = document.getElementById("img-Box");
+        fullImg.src = smallImg.src;
+      }
+    </script>
+  </body>
+</html>
